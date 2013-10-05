@@ -1,0 +1,35 @@
+<h1>Listing customer_feedbacks</h1>
+
+<table>
+  <tr>
+    <th>Company name</th>
+    <th>Person name</th>
+    <th>Address</th>
+    <th>Tel no</th>
+    <th>Fax no</th>
+    <th>Email</th>
+    <th>Req detail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customer_feedbacks.each do |customer_feedback| %>
+  <tr>
+    <td><%= customer_feedback.company_name %></td>
+    <td><%= customer_feedback.person_name %></td>
+    <td><%= customer_feedback.address %></td>
+    <td><%= customer_feedback.tel_no %></td>
+    <td><%= customer_feedback.fax_no %></td>
+    <td><%= customer_feedback.email %></td>
+    <td><%= customer_feedback.req_detail %></td>
+    <td><%= link_to 'Show', customer_feedback %></td>
+    <td><%= link_to 'Edit', edit_customer_feedback_path(customer_feedback) %></td>
+    <td><%= link_to 'Destroy', customer_feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer feedback', new_customer_feedback_path %>

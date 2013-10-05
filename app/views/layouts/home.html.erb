@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Vidhata cranes</title>
+    <%= stylesheet_link_tag 'style.css','bjqs.css' %>
+    <%= javascript_include_tag 'application' %>
+<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+</head>
+<div id ="container">
+ <marquee behavior="scroll" direction="left">
+  <h3>
+       owner & Supplier: Mobile, telescopic, Crawler Cranes , Hydra Transport & Labour Contracter,
+       Machine Loading Unloading & Erection, Factory Shed Dismentling Work.</h3>
+ </marquee><br>
+
+<header>
+    <div id ="logo">
+        <%= image_tag('LOGO.jpg') %>
+    </div>
+
+    <nav>
+        <ul><b>
+            <li><%= link_to 'Home', root_url  %></li>
+            <li><%= link_to 'Products', products_path  %></li>
+            <li><%= link_to 'Clients', clients_path  %></li>
+            <li><%= link_to 'Contact Us', contacts_path  %></li>
+            <li><%= link_to 'About Us', about_vidhata_cranes_path  %></li>
+        </b></ul>
+    </nav>
+</header>
+
+<body>
+
+<article>
+  <p>
+    <div id="banner-slide">
+      <ul class="bjqs">
+        <li><%= image_tag('100_2680.JPG', :title=>"Automatically generated caption") %></li>
+        <li><%= image_tag('100_2681.JPG', :title=>"Automatically generated caption") %></li>
+        <li><%= image_tag('DSC00018.jpg', :title=>"Automatically generated caption") %></li>
+        <li><%= image_tag('hydrocrnaes.jpg', :title=>"Automatically generated caption") %></li>
+        <li><%= image_tag('2012-07-30-037.jpg', :title=>"Automatically generated caption") %></li>
+      </ul>
+   </div>
+
+<%= javascript_include_tag 'jquery.secret-source.min.js' %>
+<script class="secret-source">
+jQuery(document).ready(function($) {
+
+$('#banner-slide').bjqs({
+  animtype      : 'slide',
+  height        : 600,
+  width         : 1200,
+  responsive    : true,
+  randomstart   : true,
+  auto		  		: true,
+  loop		  		: true,
+  clickstop     : false,
+  pause		  		: 500
+});
+
+});
+</script>
+<article style ="background:black;padding:20px;color:silver;border-radius:5px;">
+<h1> About Us </h1>
+Vidhata crane service is established in 2001. a firm in the business of letting cranes on hire to various industries and to different projects sites of Private Companies, Semi-Govt. (undertakings) and Govt. Departments, with a best knowledgeble of experienced operators and work-hands.
+
+We are a leading crane hiring company with a fleet of 10 cranes of various manufacturers, capacities ranging from a 12mt crane to a 60mt crane with required extension boom lengths to suit almost any type of job. We have a backing of 10 years of experience in the field to carry out jobs with efficacy.
+
+We have for your jobs Mobile Cranes, Telescopic Cranes, Hydro-cranes Crawler Cranes, Fork lift on monthly as well as daily basis or on hourly Rent as and whenever required
+
+
+</article>
+</p>
+</article>
+</div>
+<br><br>
+<footer>
+        <b style ="text-align:center"><%= link_to 'Home', root_url  %> |
+             <%= link_to 'Products', products_path  %> |
+             <%= link_to 'Clients', clients_path  %> |
+             <%= link_to 'Contact Us', contacts_path  %> |
+             <%= link_to 'About Us', about_vidhata_cranes_path  %></b>
+        <hr>
+ <h4 style ="padding-left:400px;">All rights reserved by Express Crane Service | <b>&copy; Vidhata cranes 2013 </b></h4>
+</footer>
+
+</body>
+
+</html>

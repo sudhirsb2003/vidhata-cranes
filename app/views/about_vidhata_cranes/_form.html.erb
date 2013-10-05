@@ -1,0 +1,21 @@
+<%= form_for(@about_vidhata_crane) do |f| %>
+  <% if @about_vidhata_crane.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@about_vidhata_crane.errors.count, "error") %> prohibited this about_vidhata_crane from being saved:</h2>
+
+      <ul>
+      <% @about_vidhata_crane.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :about_us %><br />
+    <%= f.text_area :about_us %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

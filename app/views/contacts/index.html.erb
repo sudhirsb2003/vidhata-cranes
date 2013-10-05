@@ -1,0 +1,61 @@
+  <style>
+    #office-address {
+        font-family: 'Bubbler One', sans-serif;
+        color:#CC0099;
+        padding:20px;
+        display: inline-block;
+        background-color: silver;
+        border-radius:4px;
+        width:49%;
+    }
+
+    #depo-address {
+        font-family: 'Bubbler One', sans-serif;
+                color:#CC0099;
+        padding:20px;
+        display: inline-block;
+        background-color: silver;
+        border-radius:4px;
+        width:49%;
+    }
+  </style>
+
+<%= gmaps(
+  :markers => { :data => @json },
+  :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
+  :auto_zoom => false, # :auto_zoom defaults to full zoom in, set to false to utilize :zoom
+  :zoom => 15 }	# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
+) %>
+
+<br>
+
+<% @contacts.each do |contact| %>
+
+  <div id="office-address">
+    <h3>Off :</h3>
+    <b style ='line-height: 20px;'>
+      Opp. OswalPark, Near Thane Sahakari Bank,<br> Pokhran Road no:2,<br> Thane -400 601.
+    </b>
+  </div>
+
+  <br><br><div id="depo-address">
+    <h3>Depo :</h3>
+    <b style ='line-height: 20px;'>
+      Opp. Golden Park (Param Hospital), <br>Shantaram Hariram Compound, Muktai Nagar,<br> Thane(West) 400 601.
+    </b>
+  </div>
+
+ <br><br><b id ="office-address">
+ <b>Contact Us On :</b><br>
+ <%= image_tag('email.png', :size=>"50x40") %> | vidhatacranethae@yahoo.com<br>
+   <h3>Mob : 98920006376 | 9820857926<hr>
+   Office : 21736548 <hr>
+   Telefax : 21736550</h3>
+ </b>
+<!--<% if signed_in? %>
+    <td><%= link_to 'Show', contact %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+<% end %>-->
+</div>

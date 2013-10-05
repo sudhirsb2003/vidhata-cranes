@@ -1,0 +1,22 @@
+
+development:
+    adapter: postgresql
+    host: localhost
+    database: vidhata_cranes_development
+    username: postgres
+    password: safew
+
+test:
+    adapter: postgresql
+    host: localhost
+    database: vidhata_cranes_test
+    username: postgres
+    password: safew
+
+production:
+    adapter: postgresql
+    host: localhost
+    database: vidhata_cranes_production
+    username: postgres
+    password: safew
+    reconnect: true

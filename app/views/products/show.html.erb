@@ -1,0 +1,13 @@
+
+<p style ="font-size:30px;color:#fff">
+  <%= @product.name %> |
+  <%= link_to 'Back', products_path %><br><br><br>
+</p>
+
+<p>
+  <%= image_tag @product.photo.url(:large) %>
+</p><br><br><br>
+
+<p style ="color:#CC0099">
+  <%= @product.detail %>
+</p>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company name:</b>
+  <%= @customer_feedback.company_name %>
+</p>
+
+<p>
+  <b>Person name:</b>
+  <%= @customer_feedback.person_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @customer_feedback.address %>
+</p>
+
+<p>
+  <b>Tel no:</b>
+  <%= @customer_feedback.tel_no %>
+</p>
+
+<p>
+  <b>Fax no:</b>
+  <%= @customer_feedback.fax_no %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @customer_feedback.email %>
+</p>
+
+<p>
+  <b>Req detail:</b>
+  <%= @customer_feedback.req_detail %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_feedback_path(@customer_feedback) %> |
+<%= link_to 'Back', customer_feedbacks_path %>
