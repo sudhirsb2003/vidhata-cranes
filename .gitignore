@@ -4,4 +4,3 @@
 /public/system/*
 db/*.sqlite3
 log/*.log
-config/initializers/secret_token.rb
