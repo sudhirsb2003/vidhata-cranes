@@ -2,7 +2,7 @@ class CustomerFeedbacksController < ApplicationController
   # GET /customer_feedbacks
   # GET /customer_feedbacks.json
   def index
-    @customer_feedbacks = CustomerFeedback.all
+    @customer_feedbacks = CustomerFeedback.order(:id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +44,7 @@ class CustomerFeedbacksController < ApplicationController
 
     respond_to do |format|
       if @customer_feedback.save
-        format.html { redirect_to @customer_feedback, notice: 'Customer feedback was successfully created.' }
+        format.html { redirect_to new_customer_feedback_path, notice: 'Dear Customer your requirements are successfully submitted, vidhata cranes will soon get back to you, Thank you!.' }
         format.json { render json: @customer_feedback, status: :created, location: @customer_feedback }
       else
         format.html { render action: "new" }

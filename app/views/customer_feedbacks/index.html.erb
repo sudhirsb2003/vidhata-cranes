@@ -1,35 +1,34 @@
-<h1>Listing customer_feedbacks</h1>
-
-<table>
-  <tr>
-    <th>Company name</th>
-    <th>Person name</th>
-    <th>Address</th>
-    <th>Tel no</th>
-    <th>Fax no</th>
-    <th>Email</th>
-    <th>Req detail</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<h1>Listing customer feedbacks</h1><hr>
+<style>
+ h3{color:black;}
+</style>
 <% @customer_feedbacks.each do |customer_feedback| %>
-  <tr>
-    <td><%= customer_feedback.company_name %></td>
-    <td><%= customer_feedback.person_name %></td>
-    <td><%= customer_feedback.address %></td>
-    <td><%= customer_feedback.tel_no %></td>
-    <td><%= customer_feedback.fax_no %></td>
-    <td><%= customer_feedback.email %></td>
-    <td><%= customer_feedback.req_detail %></td>
-    <td><%= link_to 'Show', customer_feedback %></td>
-    <td><%= link_to 'Edit', edit_customer_feedback_path(customer_feedback) %></td>
-    <td><%= link_to 'Destroy', customer_feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div id ="feedback" style = "background:#F8F8F8;color:#461919;padding:20px;">
+
+<h3> Company Name </h3>
+<p><%= customer_feedback.company_name %></p>
+
+<h3> Person Name</h3>
+<p><%= customer_feedback.person_name %></p>
+
+<h3> Address</h3>
+<p><%= customer_feedback.address %></p>
+
+<h3> Telephone Number </h3>
+<p><%= customer_feedback.tel_no %></p>
+
+<h3> Fax Number </h3>
+  <% if !customer_feedback.fax_no.empty? %>
+    <p><%= customer_feedback.fax_no %></p>
+  <% else %>
+    <p> no fax number </p>
 <% end %>
-</table>
 
-<br />
+<h3> Email : </h3>
+<p><%= customer_feedback.email %></p>
 
-<%= link_to 'New Customer feedback', new_customer_feedback_path %>
+<h3> Requirement Detail: </h3>
+<p><%= customer_feedback.req_detail %></p>
+<hr>
+</div>
+<% end %>

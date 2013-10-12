@@ -1,6 +1,7 @@
 /.bundle
 /tmp
 /.git
-/public/system/*
+/public/system/
+/public/assets/
 db/*.sqlite3
 log/*.log
