@@ -2,6 +2,6 @@
 /tmp
 /.git
 /public/system/
-/public/assets/
+/public
 db/*.sqlite3
 log/*.log
