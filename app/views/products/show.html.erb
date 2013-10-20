@@ -11,3 +11,12 @@
 <p style ="color:#CC0099">
   <%= @product.detail %>
 </p>
+
+
+<% if @product.previous %>
+ <%= link_to 'Previous', @product.previous %>
+<% end %>
+
+<% if @product.next %>
+ <%= link_to 'Next', @product.next %>
+<% end %>

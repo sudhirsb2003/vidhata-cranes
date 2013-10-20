@@ -1,22 +1,16 @@
 VidhataCranes::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-
   resources :clients
-
-
   resources :customer_feedbacks
-
-
   get "home/index"
-
   resources :about_vidhata_cranes
   resources :contacts
   devise_for :users
   ActiveAdmin.routes(self)
   resources :products
   root :to => 'home#index'
-
+  match '/products/:id/page/:page' => "products#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

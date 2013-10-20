@@ -12,4 +12,14 @@ class Product < ActiveRecord::Base
 	validates_attachment_size :photo, :less_than => 15.megabytes
 	validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
+
+  def previous
+    Product.where('products.id < ?', self.id).first
+  end
+
+  def next
+    Product.where('products.id > ?', self.id).first
+  end
+
+
 end
