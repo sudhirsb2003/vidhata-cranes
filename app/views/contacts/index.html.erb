@@ -1,6 +1,5 @@
   <style>
     #office-address {
-        font-family: 'Bubbler One', sans-serif;
         color:#CC0099;
         padding:20px;
         display: inline-block;
@@ -10,8 +9,7 @@
     }
 
     #depo-address {
-        font-family: 'Bubbler One', sans-serif;
-                color:#CC0099;
+        color:#CC0099;
         padding:20px;
         display: inline-block;
         background-color: silver;
@@ -28,34 +26,24 @@
 ) %>
 
 <br>
-
+<link href='http://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
 <% @contacts.each do |contact| %>
+<b>
 
-  <div id="office-address">
-    <h3>Off :</h3>
-    <b style ='line-height: 20px;'>
+  <div id="office-address" style="font-family: 'Eagle Lake', cursive;">
+    <h3><u>Office address :</u></h3>
+    <p style ='line-height: 25px;'>
       Opp. OswalPark, Near Thane Sahakari Bank,<br> Pokhran Road no:2,<br> Thane -400 601.
-    </b>
+    </p>
   </div>
 
-  <br><br><div id="depo-address">
-    <h3>Depo :</h3>
-    <b style ='line-height: 20px;'>
-      Opp. Golden Park (Param Hospital), <br>Shantaram Hariram Compound, Muktai Nagar,<br> Thane(West) 400 601.
-    </b>
-  </div>
-
- <br><br><b id ="office-address">
- <b>Contact Us On :</b><br>
+ <br><br>
+ <div id ="office-address" style="line-height:25px;font-family: 'Eagle Lake', cursive;">
+ <p><u>Contact Us On :</u><br><br>
  Email | vidhatacranethae@yahoo.com<br>
    <h3>Mob : 98920006376 | 9820857926<hr>
    Office : 21736548 <hr>
    Telefax : 21736550</h3>
- </b>
-<!--<% if signed_in? %>
-    <td><%= link_to 'Show', contact %></td>
-    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ </p>
 <% end %>
-<% end %>-->
 </div>
