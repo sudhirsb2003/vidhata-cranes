@@ -35,7 +35,7 @@ footer{
 }
 
 nav {
-    margin-top: -150px;
+    margin-top: -130px;
     margin-left: 510px;
     text-align: center;
 }
@@ -54,7 +54,7 @@ nav ul {
 	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
 	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%);
-	padding: 0 20px;
+	padding: 0px 0px 0px 0px;
 	border-radius: 10px;
 	list-style: none;
 	position: relative;
@@ -78,7 +78,7 @@ nav ul {
 			}
 
 		nav ul li a {
-			display: block; padding: 20px 30px;
+			display: block; padding: 18px 27px;
 			color: #757575; text-decoration: none;
 		}
 
